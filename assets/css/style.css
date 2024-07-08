@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  .wishlist {
+    a {
+      font-family: "Cormorant", serif;
+      font-style: italic;
+      font-weight: 100;
+      text-decoration: none;
+      color: #838383;
+      font-size: 22px;
+      .heart path {
+        fill: #fff;
+        transition: all 0.25s ease-in-out;
+      }
+
+      &:hover path {
+        fill: #4f4e4e;
+      }
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      li {
+        list-style: none;
+        .logo {
+          width: 150px;
+        }
+        a {
+          font-family: "Lato", serif;
+          font-weight: 300;
+          text-decoration: none;
+          color: black;
+          font-size: 14px;
+          text-transform: uppercase;
+          position: relative;
+          &::after {
+            transition: 0.5s all;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            content: " ";
+            background-color: #000;
+            height: 1px;
+            width: 0px;
+          }
+          &:hover::after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            content: " ";
+            background-color: #000;
+            height: 1px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .cart-menu {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
