@@ -4,7 +4,6 @@
 }
 /* Main section */
 .main-section {
-  padding: 50px 0;
   .photos {
     display: flex;
     width: 100%;
@@ -229,6 +228,144 @@
   }
 }
 
+/* Pure Skin section */
+.pure-skin-section {
+  .container {
+    .head {
+      text-align: center;
+      padding-bottom: 50px;
+      span {
+        font-size: 60px;
+        font-family: "Moon Dance", cursive;
+        font-weight: 100;
+        color: #c4c4c4;
+        position: relative;
+        top: 20px;
+      }
+      .heading {
+        font-family: "Lato", serif;
+        font-weight: 500;
+        color: #000;
+        font-size: 30px;
+      }
+      .text {
+        font-family: "Cormorant", serif;
+        font-weight: 100;
+        color: #777575;
+        font-style: italic;
+        font-size: 23px;
+      }
+    }
+    .pure-skin-photo {
+      height: 80vh;
+      background-image: url("../images/h-2-background-img-1.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      div {
+        position: absolute;
+        top: 100px;
+        right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 500px;
+        }
+        .find-beauty-btn {
+          margin-top: 30px;
+          background-color: none;
+          border: 1px solid #000;
+          padding: 15px 60px;
+          font-family: "Lato", serif;
+          font-size: 15px;
+          transition: 0.5s all;
+          text-decoration: none;
+          color: #000;
+          &:hover {
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .doctor-david {
+      display: flex;
+      .photo {
+        width: 50%;
+      }
+      .text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        .name-dr {
+          font-family: "Lato", serif;
+          font-weight: 500;
+          font-size: 30px;
+        }
+        .about-dr {
+          width: 450px;
+          font-family: "Cormorant", serif;
+          font-size: 27px;
+          color: #777575;
+          font-style: italic;
+          padding: 30px 0;
+        }
+        span {
+          width: 400px;
+          font-family: "Cormorant", serif;
+          font-size: 16px;
+          color: #777575;
+        }
+        img {
+          width: 200px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* Purchase Timeline section */
+.purchase-timeline-section {
+    .purchase {
+      background-image: url("../images/m-h-background-2-2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .card {
+        display: flex;
+        width: 400px;
+        img{
+          margin-right: 10px;
+        }
+        .text {
+          p {
+            font-family: "Lato", serif;
+            color: #000;
+            font-size: 22px;
+            font-weight: 500;
+          }
+          span {
+            font-family: "Cormorant", serif;
+            color: #777575;
+            font-size: 19px;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+  
+}
+
 @media only screen and (max-width: 768px) {
   .main-section {
     .photos {
@@ -242,13 +379,12 @@
     }
   }
   .our-collection-section {
-    
     .photo-product {
       flex-direction: column;
 
       .photo-side {
         width: 90% !important;
-        img{
+        img {
           width: 100%;
         }
       }
