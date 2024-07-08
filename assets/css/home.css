@@ -129,6 +129,8 @@
     }
     .photo-product {
       display: flex;
+      justify-content: center;
+      align-items: center;
       .photo-side {
         width: 50%;
         img {
@@ -221,6 +223,39 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-section {
+    .photos {
+      flex-direction: column;
+      .left-side {
+        width: 100%;
+      }
+      .right-side {
+        width: 100%;
+      }
+    }
+  }
+  .our-collection-section {
+    
+    .photo-product {
+      flex-direction: column;
+
+      .photo-side {
+        width: 90% !important;
+        img{
+          width: 100%;
+        }
+      }
+      .products-side {
+        width: 90% !important;
+        .product {
+          width: 100%;
         }
       }
     }
