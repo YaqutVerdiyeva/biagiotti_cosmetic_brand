@@ -146,21 +146,75 @@
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          .about-product {
+            transition: 0.5s all;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 88;
+            .content {
+              padding: 30px;
+              background-color: #fff;
+              display: flex;
+              width: 60%;
+              height: 80%;
+              position: relative;
+              .close-product {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                &:hover {
+                  cursor: pointer;
+                }
+                i {
+                  font-size: 30px;
+                }
+              }
+              .about {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                span {
+                  font-size: 25px;
+                  font-family: "Moon Dance", cursive;
+                  font-weight: 100;
+                  color: #777575;
+                  position: relative;
+                  top: 20px;
+                }
+                p {
+                  font-family: "Lato", serif;
+                  font-weight: 500;
+                  color: #000;
+                  font-size: 30px;
+                }
+              }
+            }
+          }
 
           .photo {
-            transition: 1s all;
             position: relative;
             img {
               height: 250px;
             }
             .icons {
-              display: none;
               .icon {
+                transition: 0.5s all;
+                height: 0px;
+                overflow: hidden;
                 position: absolute;
-                top: 0;
+                bottom: 0;
                 left: 0;
                 right: 0;
-                height: 250px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -187,6 +241,9 @@
               cursor: pointer;
               .icons {
                 display: block;
+                .icon {
+                  height: 250px;
+                }
               }
             }
           }
@@ -367,6 +424,39 @@
   }
   .container {
     .timeline {
+      .video {
+        transition: 0.5s all;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 0;
+        overflow: hidden;
+        background-color: rgb(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 88;
+        .content {
+          background-color: #fff;
+          display: flex;
+          width: 60%;
+          height: 80%;
+          position: relative;
+          .close-video {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            &:hover {
+              cursor: pointer;
+            }
+            i {
+              font-size: 30px;
+            }
+          }
+        }
+      }
       margin-bottom: 50px;
       display: flex;
       width: 100%;
@@ -456,6 +546,7 @@
             transition: 0.5s all;
             &:hover {
               background-color: transparent;
+              cursor: pointer;
               color: #000;
             }
           }

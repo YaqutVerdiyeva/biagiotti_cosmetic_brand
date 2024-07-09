@@ -9,6 +9,7 @@ let closeResponsiveMenu = document.querySelector(".close-responsive-menu");
 let header = document.querySelector("header");
 let responsiveNavbar = document.querySelector(".responsive-navbar");
 let scrollUp = document.querySelector(".scroll-up-btn");
+ 
 
 openMenu.addEventListener("click", () => {
   sideBar.style.width = "540px";
