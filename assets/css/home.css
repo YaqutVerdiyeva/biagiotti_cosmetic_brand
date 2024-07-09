@@ -257,7 +257,7 @@
       }
     }
     .pure-skin-photo {
-      height: 80vh;
+      height: 500px;
       background-image: url("../images/h-2-background-img-1.jpg");
       background-position: center;
       background-repeat: no-repeat;
@@ -296,6 +296,9 @@
       display: flex;
       .photo {
         width: 50%;
+        img {
+          width: 100%;
+        }
       }
       .text {
         display: flex;
@@ -332,38 +335,257 @@
 
 /* Purchase Timeline section */
 .purchase-timeline-section {
-    .purchase {
-      background-image: url("../images/m-h-background-2-2.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 90vh;
+  .purchase {
+    background-image: url("../images/m-h-background-2-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      .card {
-        display: flex;
-        width: 400px;
-        img{
-          margin-right: 10px;
+      width: 400px;
+      img {
+        margin-right: 10px;
+      }
+      .text {
+        p {
+          font-family: "Lato", serif;
+          color: #000;
+          font-size: 22px;
+          font-weight: 500;
         }
+        span {
+          font-family: "Cormorant", serif;
+          color: #777575;
+          font-size: 19px;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+  .container {
+    .timeline {
+      margin-bottom: 50px;
+      display: flex;
+      width: 100%;
+      .left {
+        height: 500px;
+        width: 50%;
+        background-image: url("../images/m-h-single-img-3.jpg");
+        background-position: center;
+        background-size: cover;
+
         .text {
-          p {
-            font-family: "Lato", serif;
-            color: #000;
-            font-size: 22px;
-            font-weight: 500;
+          padding-left: 30px;
+          width: 430px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .head {
+            span {
+              font-size: 60px;
+              font-family: "Moon Dance", cursive;
+              font-weight: 100;
+              color: #c4c4c4;
+              position: relative;
+              top: 20px;
+            }
+            p {
+              font-family: "Lato", serif;
+              font-weight: 500;
+              color: #000;
+              font-size: 30px;
+            }
           }
-          span {
+          .main-text {
+            font-size: 22px;
             font-family: "Cormorant", serif;
-            color: #777575;
-            font-size: 19px;
+            font-style: italic;
             font-weight: 100;
+            color: #777575;
+            padding: 20px 0;
+          }
+          .about {
+            font-size: 17px;
+            font-family: "Cormorant", serif;
+            font-weight: 100;
+            color: #777575;
+            padding-bottom: 40px;
+          }
+          .find-beauty {
+            background-color: none;
+            border: 1px solid #000;
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Lato", serif;
+            font-size: 14px;
+            transition: 0.5s all;
+            text-decoration: none;
+            color: #000;
+            &:hover {
+              background-color: #000;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .right {
+        width: 50%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../images/m-h-single-img-4.jpg");
+        background-position: center;
+        background-size: cover;
+
+        .btn {
+          .open-video-btn {
+            color: #fff;
+            background-color: #000;
+            border: 1px solid #000;
+            width: 60px;
+            height: 60px;
+            font-size: 25px;
+            transition: 0.5s all;
+            &:hover {
+              background-color: transparent;
+              color: #000;
+            }
           }
         }
       }
     }
-  
+  }
+}
+
+/* Beauty Cosmetic section */
+.beauty-cosmetic-section {
+  padding: 50px 0;
+  .container {
+    .cosmetics {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .card-1,
+      .card-2,
+      .card-3,
+      .card-4,
+      .card-5,
+      .card-6,
+      .card-7,
+      .card-8 {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        img {
+          width: 300px;
+          height: 300px;
+        }
+        &::after {
+          transition: 0.5s all;
+          position: absolute;
+          width: 280px;
+          height: 0;
+          background-color: #fff;
+          overflow: hidden;
+          bottom: 10px;
+          left: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-family: "Cormorant", serif;
+          font-style: italic;
+          font-weight: 700;
+          color: #000;
+          font-size: 25px;
+          text-transform: uppercase;
+        }
+        &:hover::after {
+          height: 280px;
+          cursor: pointer;
+        }
+      }
+      .card-1 {
+        &::after {
+          content: "Lip liner";
+        }
+      }
+      .card-2 {
+        &::after {
+          content: "Scratch eyeliner";
+        }
+      }
+      .card-3 {
+        &::after {
+          content: "Baked blush";
+        }
+      }
+      .card-4 {
+        &::after {
+          content: "Pointy ball";
+        }
+      }
+      .card-5 {
+        &::after {
+          content: "Mineral blush";
+        }
+      }
+      .card-6 {
+        &::after {
+          content: "Face primer";
+        }
+      }
+      .card-7 {
+        &::after {
+          content: "Cool primer";
+        }
+      }
+      .card-8 {
+        &::after {
+          content: "Skin care";
+        }
+      }
+    }
+  }
+}
+
+/* Logo section */
+.logo-section {
+  padding: 50px 0;
+  margin: 50px 0;
+  background-image: url("../images/m-h-background-6-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .logos {
+      height: 100px;
+      .second {
+        display: none;
+      }
+      &:hover {
+        .first {
+          display: none;
+        }
+        .second {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -393,6 +615,55 @@
         .product {
           width: 100%;
         }
+      }
+    }
+  }
+  .pure-skin-section {
+    .pure-skin-photo {
+      div {
+        img {
+          width: 250px !important;
+        }
+      }
+    }
+    .doctor-david {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .photo {
+        width: 100%;
+      }
+      .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .purchase-timeline-section {
+    .purchase {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .timeline {
+      flex-direction: column;
+      .left {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .right {
+        width: 100% !important;
       }
     }
   }
