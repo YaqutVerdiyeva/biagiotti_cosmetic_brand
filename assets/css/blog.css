@@ -1,0 +1,277 @@
+/* First section */
+.first-section {
+  height: 300px;
+  background-image: url("../images/title-img-1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: "Lato", serif;
+    font-size: 45px;
+    font-weight: 500;
+    width: 80%;
+  }
+}
+
+/* Main section */
+.main-section {
+  .container {
+    padding: 50px 0;
+    display: flex;
+    width: 100%;
+    .left {
+      width: 75%;
+      padding: 0 50px;
+
+      .blog {
+        padding-bottom: 80px;
+        text-align: center;
+        img {
+          width: 100%;
+        }
+        .head {
+          padding: 30px 0;
+          span {
+            font-family: "Cormorant", serif;
+            font-size: 18px;
+            font-weight: 300;
+            color: #838383;
+            font-style: italic;
+          }
+          p {
+            a {
+              font-family: "Lato", serif;
+              font-size: 30px;
+              font-weight: 500;
+              color: #000;
+              text-decoration: none;
+            }
+          }
+        }
+        .text {
+          font-family: "Cormorant", serif;
+          font-size: 18px;
+          font-weight: 300;
+          color: #838383;
+        }
+        .icons {
+          padding: 30px 0 0 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          a {
+            border: 1px solid #000;
+            text-decoration: none;
+            i {
+              transition: 0.5s all;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #000;
+              &:hover {
+                background-color: #000;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .blog-2 {
+        padding-bottom: 80px;
+        display: flex;
+        img {
+          width: 50%;
+        }
+        .content {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .head {
+            padding: 30px 0;
+            span {
+              font-family: "Cormorant", serif;
+              font-size: 18px;
+              font-weight: 300;
+              color: #838383;
+              font-style: italic;
+            }
+            p {
+              a {
+                font-family: "Lato", serif;
+                font-size: 30px;
+                font-weight: 500;
+                color: #000;
+                text-decoration: none;
+              }
+            }
+          }
+          .text {
+            font-family: "Cormorant", serif;
+            font-size: 18px;
+            font-weight: 300;
+            width: 90%;
+            color: #838383;
+          }
+          .icons {
+            padding: 30px 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            a {
+              border: 1px solid #000;
+              text-decoration: none;
+              i {
+                transition: 0.5s all;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000;
+                &:hover {
+                  background-color: #000;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+        .content-1 {
+          padding-left: 20px;
+        }
+      }
+    }
+    .right {
+      width: 25%;
+      .about-author {
+        width: 85%;
+        p {
+          font-family: "Lato", serif;
+          font-size: 22px;
+          font-weight: 300;
+          padding: 8px 0;
+        }
+        span {
+          font-family: "Cormorant", serif;
+          font-size: 18px;
+          font-weight: 500;
+          color: #838383;
+        }
+      }
+      .categories {
+        padding: 30px 0;
+        p {
+          font-family: "Lato", serif;
+          font-size: 22px;
+          font-weight: 300;
+          padding: 8px 0;
+        }
+        ul {
+          li {
+            list-style: none;
+            font-family: "Moon Dance", serif;
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 300;
+            a {
+              text-decoration: none;
+              color: #000;
+              transition: 0.5s all;
+            }
+          }
+        }
+      }
+      .tags {
+        p {
+          font-family: "Lato", serif;
+          font-size: 22px;
+          font-weight: 300;
+          padding: 8px 0;
+        }
+        .tag {
+          display: flex;
+          flex-wrap: wrap;
+          a {
+            text-decoration: none;
+            font-family: "Cormorant", serif;
+            color: #838383;
+            font-size: 18px;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .first-section {
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .main-section {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      .left {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        .blog-2 {
+          padding-bottom: 80px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img {
+            width: 100%;
+            padding-top: 50px;
+          }
+          .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        .about-author {
+          text-align: center;
+        }
+        .categories {
+          ul {
+            text-align: center;
+          }
+        }
+        .tags {
+          text-align: center;
+          .tag {
+            display: flex;
+            justify-content: center;
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,3 @@
-let star = document.querySelectorAll(".fa-star");
 let openCreme = document.querySelector(".creme");
 let closeCreme = document.querySelector(".close-creme");
 let cremeModal = document.querySelector(".about-creme");
@@ -16,12 +15,6 @@ let closeVideo = document.querySelector(".close-video");
 let videoModal = document.querySelector(".video");
 let video = document.querySelector(".my-video");
 
-star.forEach((el) => {
-  el.addEventListener("click", () => {
-    console.log("jhdfbc");
-    el.style.color = "yellow";
-  });
-});
 openCreme.addEventListener("click", () => {
   cremeModal.style.height = "100vh";
 });
@@ -51,4 +44,25 @@ openVideo.addEventListener("click", () => {
 });
 closeVideo.addEventListener("click", () => {
   videoModal.style.width = "0";
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let star = document.querySelectorAll(".fa-star");
+
+star.forEach((el) => {
+  el.addEventListener("click", () => {
+    el.style.color = "yellow";
+    el.previousElementSibling.style.color = "yellow";
+    // el.nextElementSibling.style.color = " #c4c4c4";
+    el.previousElementSibling.previousElementSibling.style.color = "yellow";
+    // el.nextElementSibling.nextElementSibling.style.color = " #c4c4c4";
+    el.previousElementSibling.previousElementSibling.previousElementSibling.style.color =
+      "yellow";
+    // el.nextElementSibling.nextElementSibling.nextElementSibling.style.color =
+    //   "#c4c4c4";
+    el.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.color =
+      "yellow";
+    // el.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.color =
+    //   "#c4c4c4d";
+  });
 });
