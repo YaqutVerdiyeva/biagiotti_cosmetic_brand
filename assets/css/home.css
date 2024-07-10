@@ -674,6 +674,7 @@
         .second {
           display: block;
         }
+        cursor: pointer;
       }
     }
   }

@@ -1,0 +1,261 @@
+/* Main section */
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .top {
+    height: 300px;
+    background-image: url("../images/faq-title-area-6.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../images/faq-title-area-7.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    .head {
+      text-align: center;
+      width: 58%;
+      padding: 100px 0;
+      span {
+        font-size: 50px;
+        font-family: "Moon Dance", cursive;
+        font-weight: 100;
+        color: #c4c4c4;
+        position: relative;
+        top: 20px;
+      }
+      .heading {
+        font-family: "Lato", serif;
+        font-weight: 500;
+        color: #000;
+        font-size: 30px;
+      }
+      .text {
+        font-family: "Cormorant", serif;
+        font-weight: 100;
+        color: #777575;
+        font-style: italic;
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+/* Icons section */
+.icons-section {
+  background-image: url("../images/m-h-background-4-1.jpg");
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 0;
+    .icon-card {
+      width: 240px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .text {
+        text-align: center;
+        p {
+          font-size: 22px;
+          font-weight: 300;
+          color: #000;
+          font-family: "Lato", serif;
+        }
+        span {
+          font-family: "Cormorant", cursive;
+          font-weight: 100;
+          color: #777575;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/* Find beauty section */
+.find-beauty {
+  background-image: url("../images/m-h-background-5-1.jpg");
+  background-size: 100% 100%;
+
+  display: flex;
+  justify-content: center;
+  .container {
+    padding: 80px 0;
+    .head {
+      text-align: center;
+      padding-bottom: 50px;
+      span {
+        font-size: 50px;
+        font-family: "Moon Dance", cursive;
+        font-weight: 100;
+        color: #c4c4c4;
+        position: relative;
+        top: 20px;
+      }
+      .heading {
+        font-family: "Lato", serif;
+        font-weight: 500;
+        color: #000;
+        font-size: 30px;
+      }
+      .text {
+        font-family: "Cormorant", serif;
+        font-weight: 100;
+        color: #777575;
+        font-style: italic;
+        font-size: 23px;
+      }
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .card {
+        .photo {
+          position: relative;
+          &::after {
+            transition: 0.5s all;
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 0;
+            background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(255, 255, 255, 0.5) 100%
+            );
+            bottom: 0;
+            left: 0;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          .date {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            width: 60px;
+            height: 80px;
+            background-color: #feeae7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 30px;
+            font-weight: 100;
+            font-family: "Cormorant", serif;
+
+            P {
+              font-family: "Cormorant", serif;
+              font-style: italic;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        margin: 10px;
+        width: 270px;
+        .content {
+          padding: 10px 0;
+          .first-text {
+            font-family: "Mono Dance", serif;
+            color: #575050;
+            font-weight: 100;
+            font-size: 18px;
+            font-style: italic;
+          }
+          .second-text {
+            font-family: "Lato", serif;
+            font-weight: 500;
+            color: #000;
+            padding-bottom: 8px;
+            font-size: 20px;
+          }
+          span {
+            font-family: "Cormorant", serif;
+            font-weight: 500;
+            color: #777575;
+            font-size: 18px;
+          }
+          button {
+            color: #000;
+            font-family: "Cormorant", serif;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 10px 0;
+            background: transparent;
+            border: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            div {
+              margin-right: 3px;
+              width: 5px;
+              height: 1px;
+              background-color: #000;
+              transition: 0.5s all;
+            }
+            &:hover {
+              div {
+                width: 15px;
+              }
+              cursor: pointer;
+            }
+          }
+        }
+        &:hover {
+          .photo::after {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Logo section */
+.logo-section {
+  padding: 50px 0;
+  background-image: url("../images/m-h-background-4-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .logos {
+      height: 100px;
+      .second {
+        display: none;
+      }
+      &:hover {
+        .first {
+          display: none;
+        }
+        .second {
+          display: block;
+        }
+        cursor: pointer;
+      }
+    }
+  }
+}
