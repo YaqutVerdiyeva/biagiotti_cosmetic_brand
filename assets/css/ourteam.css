@@ -1,0 +1,92 @@
+/* Main section */
+.main-section {
+  height: 300px;
+  background-image: url("../images/team-page-img-4.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: "Lato", serif;
+    font-size: 45px;
+    font-weight: 500;
+    width: 80%;
+  }
+}
+
+/* Team section */
+.team-section {
+    padding: 50px 0;
+  .container {
+    .team {
+      width: 100%;
+      display: flex;
+      .photo {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      .content {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text {
+          width: 60%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          .first-text {
+            font-family: "Lato", serif;
+            font-size: 35px;
+            font-weight: 500;
+            color: #000;
+          }
+          .name-text {
+            font-family: "Moon dance", serif;
+            font-size: 25px;
+            font-weight: 100;
+            color: #838383;
+            padding: 10px 0;
+          }
+          span {
+            font-family: "Cormorant", serif;
+            font-size: 16px;
+            font-weight: 100;
+            color: #838383;
+          }
+          .icons {
+            padding: 30px 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            a {
+              border: 1px solid #000;
+              text-decoration: none;
+              i {
+                transition: 0.5s all;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000;
+                &:hover {
+                  background-color: #000;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
