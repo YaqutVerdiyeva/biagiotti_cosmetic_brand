@@ -398,6 +398,16 @@ footer {
     background-color: #000;
   }
 }
+::-webkit-scrollbar-thumb {
+  background-color: #f4dbd7;
+}
+::-webkit-scrollbar {
+  background-color: #fff;
+  /* width: 0; */
+}
+::selection {
+  background-color: #f4dbd7;
+}
 
 @media only screen and (max-width: 768px) {
   .responsive-navbar {
