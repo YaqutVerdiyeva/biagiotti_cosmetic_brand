@@ -46,23 +46,76 @@ closeVideo.addEventListener("click", () => {
   videoModal.style.width = "0";
 });
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-let star = document.querySelectorAll(".fa-star");
+let star1 = document.querySelectorAll(".star1");
+let star2 = document.querySelectorAll(".star2");
+let star3 = document.querySelectorAll(".star3");
+let star4 = document.querySelectorAll(".star4");
 
-star.forEach((el) => {
+let arr1=[]
+star1.forEach((el, index) => {
   el.addEventListener("click", () => {
-    el.style.color = "yellow";
-    el.previousElementSibling.style.color = "yellow";
-    // el.nextElementSibling.style.color = " #c4c4c4";
-    el.previousElementSibling.previousElementSibling.style.color = "yellow";
-    // el.nextElementSibling.nextElementSibling.style.color = " #c4c4c4";
-    el.previousElementSibling.previousElementSibling.previousElementSibling.style.color =
-      "yellow";
-    // el.nextElementSibling.nextElementSibling.nextElementSibling.style.color =
-    //   "#c4c4c4";
-    el.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.color =
-      "yellow";
-    // el.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.color =
-    //   "#c4c4c4d";
+    arr1.push(index + 1);
+    console.log(arr1);
+    let sum = arr1.reduce((curr, a) => curr + a, 0);
+    let middleSum = Math.ceil(sum / arr1.length);
+    document.querySelector(".result1").innerHTML = `${middleSum}/5`;
+    star1.forEach((elem, i) => {
+      if (index >= i) {
+        elem.style.color = "yellow";
+      } else {
+        elem.style.color = "#c4c4c4";
+      }
+    });
+  });
+});
+let arr2=[]
+star2.forEach((el, index) => {
+  el.addEventListener("click", () => {
+    arr2.push(index + 1);
+    console.log(arr2);
+    let sum = arr2.reduce((curr, a) => curr + a, 0);
+    let middleSum = Math.ceil(sum / arr2.length);
+    document.querySelector(".result2").innerHTML = `${middleSum}/5`;
+    star2.forEach((elem, i) => {
+      if (index >= i) {
+        elem.style.color = "yellow";
+      } else {
+        elem.style.color = "#c4c4c4";
+      }
+    });
+  });
+});
+let arr3=[]
+star3.forEach((el, index) => {
+  el.addEventListener("click", () => {
+    arr3.push(index + 1);
+    console.log(arr3);
+    let sum = arr3.reduce((curr, a) => curr + a, 0);
+    let middleSum = Math.ceil(sum / arr3.length);
+    document.querySelector(".result3").innerHTML = `${middleSum}/5`;
+    star3.forEach((elem, i) => {
+      if (index >= i) {
+        elem.style.color = "yellow";
+      } else {
+        elem.style.color = "#c4c4c4";
+      }
+    });
+  });
+});
+let arr4 = [];
+star4.forEach((el, index) => {
+  el.addEventListener("click", () => {
+    arr4.push(index + 1);
+    console.log(arr4);
+    let sum = arr4.reduce((curr, a) => curr + a, 0);
+    let middleSum = Math.ceil(sum / arr4.length);
+    document.querySelector(".result4").innerHTML = `${middleSum}/5`;
+    star4.forEach((elem, i) => {
+      if (index >= i) {
+        elem.style.color = "yellow";
+      } else {
+        elem.style.color = "#c4c4c4";
+      }
+    });
   });
 });
