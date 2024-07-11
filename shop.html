@@ -34,7 +34,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Biagiotti - Beauty and Cosmetics Shop</title>
+    <link rel="stylesheet" href="./assets/css/shop.css" />
+    <title>Shop - Biagiotti</title>
   </head>
   <body>
     <div class="responsive-navbar">
@@ -160,6 +161,88 @@
         </div>
       </div>
     </div>
+    <div class="first-section">
+      <p>SHOP</p>
+    </div>
+    <div class="main-section">
+      <div class="container">
+        <div class="left">
+          <div class="categories">
+            <p>PRODUCT CATEGORIES</p>
+            <ul>
+              <li class="allproducts">All products</li>
+              <li class="cosmetic">Cosmetic</li>
+              <li class="facemask">Face Masks</li>
+              <li class="foundation">Foundation</li>
+              <li class="lipgloss">Lip Gloss</li>
+              <li class="organic">Organic</li>
+              <li class="perfumes">Perfumes</li>
+            </ul>
+          </div>
+          <div class="search">
+            <p>Search</p>
+            <input placeholder="Search Products..." type="text" />
+          </div>
+          <div class="sort">
+            <p>Sort</p>
+            <select class="sort-btn select" name="" id="">
+              <option selected hidden value="price">Price</option>
+              <option value="lowtohigh">Low to high</option>
+              <option value="hightolow">High to low</option>
+            </select>
+          </div>
+          <div class="tags">
+            <p>TAGS</p>
+            <div class="tag">
+              <a href="./shop.html">Antiaging</a>
+              <a href="./shop.html"> Beauty</a>
+              <a href="./shop.html">Body Oil</a>
+              <a href="./shop.html">Cosmetic</a>
+              <a href="./shop.html">Foundation</a>
+              <a href="./shop.html">Make Up</a>
+              <a href="./shop.html">Organic</a>
+              <a href="./shop.html">Skin Solutions</a>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="products"></div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <div class="container">
+        <div class="comments">
+          <p class="head">COMMENTS</p>
+          <div class="comment">
+            <div class="photo">
+              <img src="./assets/images/user.jfif" alt="">
+            </div>
+            <div class="content-comment">
+              <p class="name">CLAUDIA KENNEN</p>
+              <p class="time">24/5/2024</p>
+              <span
+                >Posse mundi dolorem pro in. Mea iudico suavitate scriptorem at,
+                has vidit voluptaria ut, quaeque dolores te nec.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="write-comments">
+          <p>POST A COMMENT</p>
+          <form action="">
+            <input class="user-name" placeholder="Your Name" type="text" />
+            <input class="user-photo" placeholder="Add Photo" type="file" />
+            <textarea
+              class="comment-text"
+              placeholder="Your comment"
+              rows="5"
+            ></textarea>
+            <button class="submit-btn">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="container">
         <div class="left">
@@ -200,5 +283,6 @@
       <i class="fa-solid fa-chevron-up"></i>
     </button>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/shop.js"></script>
   </body>
 </html>
