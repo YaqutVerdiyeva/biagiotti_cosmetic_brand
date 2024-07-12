@@ -1,3 +1,25 @@
+/* Header */
+header{
+  .cart-menu{
+    ul{
+      li{
+        .money{
+          border: none;
+          background-color: transparent;
+          option{
+            &:hover{
+              background-color: #000;
+            }
+          }
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* First section */
 .first-section {
   height: 300px;

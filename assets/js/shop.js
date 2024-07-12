@@ -4,35 +4,41 @@ let products = [
     name: "PINK LIPSTICK",
     type: "Lip Gloss",
     price: 49.0,
+    priceAzn: 83.3,
   },
   {
     image: "../assets/images/Shop-img-2-600x803.jpg",
     name: "HAND CREME",
     type: "Foundation",
     price: 52.0,
+    priceAzn: 88.4,
   },
   {
     image: "../assets/images/Shop-img-36-300x389.jpg",
     name: "CHARCOAL MASK",
     type: "Face Masks",
     price: 83.0,
+    priceAzn: 141.1,
   },
   {
     image: "../assets/images/Shop-img-6-600x803.jpg",
     name: "COCONUT HAND CREME",
     type: "Cosmetic",
     price: 29.0,
+    priceAzn: 49.3,
   },
   {
     image: "../assets/images/Shop-img-6-600x803.jpg",
     name: "LOTION",
     type: "Organic",
     price: 22.0,
+    priceAzn: 37.4,
   },
   {
     image: "../assets/images/Shop-img-3-600x803.jpg",
     name: "BEAUTY TONER",
     type: "Face Masks",
+    priceAzn: 76.5,
     price: 45.0,
   },
   {
@@ -40,23 +46,27 @@ let products = [
     name: "PANORAMIC WHEEL",
     type: "Perfumes",
     price: 66.0,
+    priceAzn: 112.2,
   },
   {
     image: "../assets/images/Shop-img-3-600x803.jpg",
     name: "CREME",
     type: "Organic",
     price: 45.0,
+    priceAzn: 76.5,
   },
   {
     image: "../assets/images/Shop-img-4-600x803.jpg",
     name: "EYE DROPS",
     type: "Face Masks",
     price: 18.0,
+    priceAzn: 30.6,
   },
   {
     image: "../assets/images/Shop-img-45-300x389.jpg",
     name: "POSH SAFARI",
     type: "Perfumes",
+    priceAzn: 76.5,
     price: 45.0,
   },
   {
@@ -64,24 +74,28 @@ let products = [
     name: "INSTANT DETOX",
     type: "Cosmetic",
     price: 64.0,
+    priceAzn: 108.8,
   },
   {
     image: "../assets/images/Shop-img-7-600x803.jpg",
     name: "GULA CREME",
     type: "Foundation",
     price: 38.0,
+    priceAzn: 64.6,
   },
   {
     image: "../assets/images/Shop-img-53-300x389.jpg",
     name: "VOLUME CONDITIONER",
     type: "Perfumes",
     price: 89.0,
+    priceAzn: 151.3,
   },
   {
     image: "../assets/images/Shop-img-64-300x389.jpg",
     name: "LIP MASK",
     type: "Face Masks",
     price: 35.0,
+    priceAzn: 59.5,
   },
 
   {
@@ -89,6 +103,7 @@ let products = [
     name: "K DREAM",
     type: "Organic",
     price: 83.0,
+    priceAzn: 141.1,
   },
 ];
 
@@ -101,6 +116,7 @@ let organic = document.querySelector(".organic");
 let perfumes = document.querySelector(".perfumes");
 let productSection = document.querySelector(".products");
 let select = document.querySelector(".select");
+let moneySelect = document.querySelector(".money");
 
 products.forEach((el, i) => {
   return (productSection.innerHTML += `
@@ -120,7 +136,7 @@ products.forEach((el, i) => {
               <div class="text">
                 <p class="first-p">${el.name}</p>
                 <p class="second-p">${el.type}</p>
-                <span>$${el.price}</span>
+                <span>${el.price} $</span>
               </div>
             </div>`);
 });
@@ -146,9 +162,61 @@ allproducts.addEventListener("click", () => {
               <div class="text">
                 <p class="first-p">${el.name}</p>
                 <p class="second-p">${el.type}</p>
-                <span>$${el.price}</span>
+                <span>${el.price} $</span>
               </div>
             </div>`);
+  });
+  moneySelect.addEventListener("change", function (e) {
+    console.log(select.value);
+    if (moneySelect.value == "azn") {
+      productSection.innerHTML = "";
+      products.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.priceAzn} AZN </span>
+                </div>
+              </div>`);
+      });
+    } else {
+      productSection.innerHTML = "";
+      products.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.price} $ </span>
+                </div>
+              </div>`);
+      });
+    }
   });
 });
 cosmetic.addEventListener("click", () => {
@@ -157,27 +225,80 @@ cosmetic.addEventListener("click", () => {
     console.log(elem.type);
     return elem.type === "Cosmetic";
   });
+  productSection.innerHTML = "";
   result.forEach((el, i) => {
     return (productSection.innerHTML += `
-  <div class="product">
-              <div class="photo">
-                <img
-                  src=${el.image}
-                  alt=""
-                />
-                <div class="icons">
-                  <div class="icon">
-                    <i class="fa-solid fa-plus"></i>
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
+<div class="product">
+            <div class="photo">
+              <img
+                src=${el.image}
+                alt=""
+              />
+              <div class="icons">
+                <div class="icon">
+                  <i class="fa-solid fa-plus"></i>
+                  <i class="fa-regular fa-heart"></i>
                 </div>
               </div>
-              <div class="text">
-                <p class="first-p">${el.name}</p>
-                <p class="second-p">${el.type}</p>
-                <span>$${el.price}</span>
-              </div>
-            </div>`);
+            </div>
+            <div class="text">
+              <p class="first-p">${el.name}</p>
+              <p class="second-p">${el.type}</p>
+              <span>${el.price} $</span>
+            </div>
+          </div>`);
+  });
+  moneySelect.addEventListener("change", function (e) {
+    console.log(select.value);
+    if (moneySelect.value == "azn") {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.priceAzn} AZN </span>
+                </div>
+              </div>`);
+      });
+    } else {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.price} $ </span>
+                </div>
+              </div>`);
+      });
+    }
   });
 });
 facemask.addEventListener("click", () => {
@@ -204,9 +325,61 @@ facemask.addEventListener("click", () => {
                 <div class="text">
                   <p class="first-p">${el.name}</p>
                   <p class="second-p">${el.type}</p>
-                  <span>$${el.price}</span>
+                  <span>${el.price} $</span>
                 </div>
               </div>`);
+  });
+  moneySelect.addEventListener("change", function (e) {
+    console.log(select.value);
+    if (moneySelect.value == "azn") {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.priceAzn} AZN </span>
+                </div>
+              </div>`);
+      });
+    } else {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.price} $ </span>
+                </div>
+              </div>`);
+      });
+    }
   });
 });
 foundation.addEventListener("click", () => {
@@ -233,9 +406,61 @@ foundation.addEventListener("click", () => {
                 <div class="text">
                   <p class="first-p">${el.name}</p>
                   <p class="second-p">${el.type}</p>
-                  <span>$${el.price}</span>
+                  <span>${el.price} $</span>
                 </div>
               </div>`);
+  });
+  moneySelect.addEventListener("change", function (e) {
+    console.log(select.value);
+    if (moneySelect.value == "azn") {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.priceAzn} AZN </span>
+                </div>
+              </div>`);
+      });
+    } else {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.price} $ </span>
+                </div>
+              </div>`);
+      });
+    }
   });
 });
 lipgloss.addEventListener("click", () => {
@@ -262,9 +487,61 @@ lipgloss.addEventListener("click", () => {
                   <div class="text">
                     <p class="first-p">${el.name}</p>
                     <p class="second-p">${el.type}</p>
-                    <span>$${el.price}</span>
+                    <span>${el.price} $</span>
                   </div>
                 </div>`);
+  });
+  moneySelect.addEventListener("change", function (e) {
+    console.log(select.value);
+    if (moneySelect.value == "azn") {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.priceAzn} AZN </span>
+                </div>
+              </div>`);
+      });
+    } else {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.price} $ </span>
+                </div>
+              </div>`);
+      });
+    }
   });
 });
 organic.addEventListener("click", () => {
@@ -291,9 +568,61 @@ organic.addEventListener("click", () => {
                     <div class="text">
                       <p class="first-p">${el.name}</p>
                       <p class="second-p">${el.type}</p>
-                      <span>$${el.price}</span>
+                      <span>${el.price} $</span>
                     </div>
                   </div>`);
+  });
+  moneySelect.addEventListener("change", function (e) {
+    console.log(select.value);
+    if (moneySelect.value == "azn") {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.priceAzn} AZN </span>
+                </div>
+              </div>`);
+      });
+    } else {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.price} $ </span>
+                </div>
+              </div>`);
+      });
+    }
   });
 });
 perfumes.addEventListener("click", () => {
@@ -320,13 +649,66 @@ perfumes.addEventListener("click", () => {
                       <div class="text">
                         <p class="first-p">${el.name}</p>
                         <p class="second-p">${el.type}</p>
-                        <span>$${el.price}</span>
+                        <span>${el.price} $</span>
                       </div>
                     </div>`);
   });
+  moneySelect.addEventListener("change", function (e) {
+    console.log(select.value);
+    if (moneySelect.value == "azn") {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.priceAzn} AZN </span>
+                </div>
+              </div>`);
+      });
+    } else if (moneySelect.value == "usd") {
+      productSection.innerHTML = "";
+      result.forEach((el, i) => {
+        return (productSection.innerHTML += `
+    <div class="product">
+                <div class="photo">
+                  <img
+                    src=${el.image}
+                    alt=""
+                  />
+                  <div class="icons">
+                    <div class="icon">
+                      <i class="fa-solid fa-plus"></i>
+                      <i class="fa-regular fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="text">
+                  <p class="first-p">${el.name}</p>
+                  <p class="second-p">${el.type}</p>
+                  <span>${el.price} $ </span>
+                </div>
+              </div>`);
+      });
+    } else {
+    }
+  });
 });
 
-select.addEventListener("change", function (e) {
+select.addEventListener("change", function () {
   console.log(select.value);
   if (select.value == "lowtohigh") {
     products.sort((a, b) => a.price - b.price);
@@ -352,7 +734,7 @@ select.addEventListener("change", function (e) {
             <div class="text">
               <p class="first-p">${el.name}</p>
               <p class="second-p">${el.type}</p>
-              <span>$${el.price}</span>
+              <span>${el.price} $</span>
             </div>
           </div>`);
   });
@@ -395,4 +777,90 @@ submitBtn.addEventListener("click", (e) => {
   userName.value = "";
   commentText.value = "";
   photo.value = "";
+});
+
+moneySelect.addEventListener("change", function () {
+  console.log(select.value);
+  if (moneySelect.value == "azn") {
+    productSection.innerHTML = "";
+    products.forEach((el, i) => {
+      return (productSection.innerHTML += `
+  <div class="product">
+              <div class="photo">
+                <img
+                  src=${el.image}
+                  alt=""
+                />
+                <div class="icons">
+                  <div class="icon">
+                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="text">
+                <p class="first-p">${el.name}</p>
+                <p class="second-p">${el.type}</p>
+                <span>${el.priceAzn} AZN </span>
+              </div>
+            </div>`);
+    });
+  } else {
+    productSection.innerHTML = "";
+    products.forEach((el, i) => {
+      return (productSection.innerHTML += `
+  <div class="product">
+              <div class="photo">
+                <img
+                  src=${el.image}
+                  alt=""
+                />
+                <div class="icons">
+                  <div class="icon">
+                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="text">
+                <p class="first-p">${el.name}</p>
+                <p class="second-p">${el.type}</p>
+                <span>${el.price} $ </span>
+              </div>
+            </div>`);
+    });
+  }
+});
+
+let searchInput = document.querySelector(".search-input");
+
+searchInput.addEventListener("input", function () {
+  let newProducts = products.filter((el) => {
+    return el.name
+      .toLocaleLowerCase()
+      .includes(searchInput.value.toLocaleLowerCase());
+  });
+  productSection.innerHTML = "";
+  newProducts.forEach((el, i) => {
+    return (productSection.innerHTML += `
+      <div class="product">
+                  <div class="photo">
+                    <img
+                      src=${el.image}
+                      alt=""
+                    />
+                    <div class="icons">
+                      <div class="icon">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-regular fa-heart"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text">
+                    <p class="first-p">${el.name}</p>
+                    <p class="second-p">${el.type}</p>
+                    <span>${el.price} $</span>
+                  </div>
+                </div>`);
+  });
 });
