@@ -51,7 +51,7 @@ let star2 = document.querySelectorAll(".star2");
 let star3 = document.querySelectorAll(".star3");
 let star4 = document.querySelectorAll(".star4");
 
-let arr1=[]
+let arr1 = [];
 star1.forEach((el, index) => {
   el.addEventListener("click", () => {
     arr1.push(index + 1);
@@ -68,7 +68,7 @@ star1.forEach((el, index) => {
     });
   });
 });
-let arr2=[]
+let arr2 = [];
 star2.forEach((el, index) => {
   el.addEventListener("click", () => {
     arr2.push(index + 1);
@@ -85,7 +85,7 @@ star2.forEach((el, index) => {
     });
   });
 });
-let arr3=[]
+let arr3 = [];
 star3.forEach((el, index) => {
   el.addEventListener("click", () => {
     arr3.push(index + 1);
@@ -118,4 +118,49 @@ star4.forEach((el, index) => {
       }
     });
   });
+});
+
+let counter1 = document.querySelector(".count-1");
+let counter2 = document.querySelector(".count-2");
+let counter3 = document.querySelector(".count-3");
+
+function scrollFunction1() {
+  let sum = 0;
+  let interval = setInterval(function () {
+    sum = sum + 1;
+    counter1.innerHTML = sum;
+    if (sum == 115) {
+      clearInterval(interval);
+    }
+  }, 25);
+}
+function scrollFunction2() {
+  let sum2 = 0;
+  let interval = setInterval(function () {
+    sum2 = sum2 + 1;
+    counter2.innerHTML = sum2;
+    if (sum2 == 106) {
+      clearInterval(interval);
+    }
+  }, 25);
+}
+function scrollFunction3() {
+  let sum3 = 0;
+  let interval = setInterval(function () {
+    sum3 = sum3 + 1;
+    counter3.innerHTML = sum3;
+    if (sum3 == 122) {
+      clearInterval(interval);
+    }
+  }, 25);
+}
+window.addEventListener("scroll", function () {
+  if (
+    document.documentElement.scrollTop > 2910 &&
+    document.documentElement.scrollTop < 2915
+  ) {
+    scrollFunction1();
+    scrollFunction2();
+    scrollFunction3();
+  }
 });
