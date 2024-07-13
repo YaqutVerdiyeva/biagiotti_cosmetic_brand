@@ -1,0 +1,270 @@
+{
+  "products": [
+    {
+      "image": "../assets/images/Shop-img-1-5-600x803.jpg",
+      "name": "PINK LIPSTICK",
+      "type": "Lip Gloss",
+      "price": 49,
+      "priceAzn": 83.3,
+      "id": "4766"
+    },
+    {
+      "image": "../assets/images/Shop-img-2-600x803.jpg",
+      "name": "HAND CREME",
+      "type": "Foundation",
+      "price": 52,
+      "priceAzn": 88.4,
+      "id": "3241"
+    },
+    {
+      "image": "../assets/images/Shop-img-36-300x389.jpg",
+      "name": "CHARCOAL MASK",
+      "type": "Face Masks",
+      "price": 83,
+      "priceAzn": 141.1,
+      "id": "959"
+    },
+    {
+      "image": "../assets/images/Shop-img-6-600x803.jpg",
+      "name": "COCONUT HAND CREME",
+      "type": "Cosmetic",
+      "price": 29,
+      "priceAzn": 49.3,
+      "id": "5621"
+    },
+    {
+      "image": "../assets/images/Shop-img-6-600x803.jpg",
+      "name": "LOTION",
+      "type": "Organic",
+      "price": 22,
+      "priceAzn": 37.4,
+      "id": "54165"
+    },
+    {
+      "image": "../assets/images/Shop-img-3-600x803.jpg",
+      "name": "BEAUTY TONER",
+      "type": "Face Masks",
+      "priceAzn": 76.5,
+      "price": 45,
+      "id": "524852"
+    },
+    {
+      "image": "../assets/images/Shop-img-44-300x389.jpg",
+      "name": "PANORAMIC WHEEL",
+      "type": "Perfumes",
+      "price": 66,
+      "priceAzn": 112.2,
+      "id": "5247"
+    },
+    {
+      "image": "../assets/images/Shop-img-3-600x803.jpg",
+      "name": "CREME",
+      "type": "Organic",
+      "price": 45,
+      "priceAzn": 76.5,
+      "id": "5485"
+    },
+    {
+      "image": "../assets/images/Shop-img-4-600x803.jpg",
+      "name": "EYE DROPS",
+      "type": "Face Masks",
+      "price": 18,
+      "priceAzn": 30.6,
+      "id": "45225"
+    },
+    {
+      "image": "../assets/images/Shop-img-45-300x389.jpg",
+      "name": "POSH SAFARI",
+      "type": "Perfumes",
+      "priceAzn": 76.5,
+      "price": 45,
+      "id": "52452"
+    },
+    {
+      "image": "../assets/images/Shop-img-36-300x389.jpg",
+      "name": "INSTANT DETOX",
+      "type": "Cosmetic",
+      "price": 64,
+      "priceAzn": 108.8,
+      "id": "38545"
+    },
+    {
+      "image": "../assets/images/Shop-img-7-600x803.jpg",
+      "name": "GULA CREME",
+      "type": "Foundation",
+      "price": 38,
+      "priceAzn": 64.6,
+      "id": "8674"
+    },
+    {
+      "image": "../assets/images/Shop-img-53-300x389.jpg",
+      "name": "VOLUME CONDITIONER",
+      "type": "Perfumes",
+      "price": 89,
+      "priceAzn": 151.3,
+      "id": "543663"
+    },
+    {
+      "image": "../assets/images/Shop-img-64-300x389.jpg",
+      "name": "LIP MASK",
+      "type": "Face Masks",
+      "price": 35,
+      "priceAzn": 59.5,
+      "id": "6986"
+    },
+    {
+      "image": "../assets/images/Shop-img-36-300x389.jpg",
+      "name": "K DREAM",
+      "type": "Organic",
+      "price": 83,
+      "priceAzn": 141.1,
+      "id": "3638"
+    }
+  ],
+  "comments": [
+    {
+      "name": "CLAUDIA KENNEN",
+      "time": "24/5/2024",
+      "photo": "user.jfif",
+      "comment": "Posse mundi dolorem pro in. Mea iudico suavitate scriptorem at, has vidit voluptaria ut, quaeque dolores te nec."
+    },
+    {
+      "id": "2305",
+      "name": "Isabella Larosa",
+      "photo": "C:\\fakepath\\blog-img-2.jpg",
+      "comment": "It is the best page!",
+      "time": "13/6/2024"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "4766",
+      "image": "../assets/images/Shop-img-1-5-600x803.jpg",
+      "name": "PINK LIPSTICK",
+      "type": "Lip Gloss",
+      "price": 49,
+      "priceAzn": 83.3
+    },
+    {
+      "id": "524852",
+      "image": "../assets/images/Shop-img-3-600x803.jpg",
+      "name": "BEAUTY TONER",
+      "type": "Face Masks",
+      "priceAzn": 76.5,
+      "price": 45
+    },
+    {
+      "id": "5621",
+      "image": "../assets/images/Shop-img-6-600x803.jpg",
+      "name": "COCONUT HAND CREME",
+      "type": "Cosmetic",
+      "price": 29,
+      "priceAzn": 49.3
+    },
+    {
+      "id": "45225",
+      "image": "../assets/images/Shop-img-4-600x803.jpg",
+      "name": "EYE DROPS",
+      "type": "Face Masks",
+      "price": 18,
+      "priceAzn": 30.6
+    }
+  ],
+  "basket": [
+    {
+      "id": "4766",
+      "image": "../assets/images/Shop-img-1-5-600x803.jpg",
+      "name": "PINK LIPSTICK",
+      "type": "Lip Gloss",
+      "price": 49,
+      "priceAzn": 83.3
+    },
+    {
+      "id": "3241",
+      "image": "../assets/images/Shop-img-2-600x803.jpg",
+      "name": "HAND CREME",
+      "type": "Foundation",
+      "price": 52,
+      "priceAzn": 88.4
+    },
+    {
+      "id": "3241",
+      "image": "../assets/images/Shop-img-2-600x803.jpg",
+      "name": "HAND CREME",
+      "type": "Foundation",
+      "price": 52,
+      "priceAzn": 88.4
+    },
+    {
+      "id": "959",
+      "image": "../assets/images/Shop-img-36-300x389.jpg",
+      "name": "CHARCOAL MASK",
+      "type": "Face Masks",
+      "price": 83,
+      "priceAzn": 141.1
+    },
+    {
+      "id": "3241",
+      "image": "../assets/images/Shop-img-2-600x803.jpg",
+      "name": "HAND CREME",
+      "type": "Foundation",
+      "price": 52,
+      "priceAzn": 88.4
+    },
+    {
+      "id": "4766",
+      "image": "../assets/images/Shop-img-1-5-600x803.jpg",
+      "name": "PINK LIPSTICK",
+      "type": "Lip Gloss",
+      "price": 49,
+      "priceAzn": 83.3
+    }
+  ],
+  "portfolio": [
+    {
+      "name": "../assets/images/m-h-port-img-1.jpg",
+      "type": "Bodycare",
+      "content": "LIP LINER"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-2.jpg",
+      "content": "SCRATCH EYELINER",
+      "type": "Cosmetics"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-3.jpg",
+      "content": "BAKED BLUSH",
+      "type": "Make Up"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-4.jpg",
+      "content": "POINTY BALL",
+      "type": "Bodycare"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-5.jpg",
+      "content": "MINERAL BLUSH",
+      "type": "Cosmetics"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-6.jpg",
+      "content": "FACE PRIMER",
+      "type": "Make Up"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-7.jpg",
+      "content": "COOL PRIMER",
+      "type": "LIP LINER"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-8.jpg",
+      "content": "SHOWER GEL",
+      "type": "Make Up"
+    },
+    {
+      "name": "../assets/images/m-h-port-img-1.jpg",
+      "content": "FACE SOAP",
+      "type": "Cosmetics"
+    }
+  ]
+}

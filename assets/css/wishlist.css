@@ -1,0 +1,103 @@
+/* Wishlist section */
+.wishlist-section {
+  p {
+    font-size: 35px;
+    font-family: "Cormorant", serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .wishlist-products {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .product {
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .photo {
+        position: relative;
+        img {
+          height: 250px;
+          width: 100%;
+        }
+        .icons {
+          .icon {
+            transition: 0.5s all;
+            height: 0px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            gap: 15px;
+            i {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #777575;
+              width: 30px;
+              height: 30px;
+              color: #000;
+              transition: 0.5s all;
+              &:hover {
+                color: #fff;
+                cursor: pointer;
+                background-color: #000;
+              }
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .icons {
+            display: block;
+            .icon {
+              height: 255px;
+            }
+          }
+        }
+      }
+      .text {
+        text-align: center;
+        line-height: 28px;
+        .first-p {
+          font-family: "Lato", serif;
+          font-weight: 300;
+          color: #000;
+          font-size: 20px;
+        }
+        .second-p {
+          font-family: "Lato", serif;
+          font-weight: 300;
+          color: #777575;
+          font-size: 13px;
+          &:hover {
+            color: #000;
+            cursor: pointer;
+          }
+        }
+        span {
+          font-family: "Lato", serif;
+          font-weight: 300;
+          color: #000;
+          font-size: 18px;
+        }
+        .stars {
+          .fa-solid {
+            color: #c4c4c4;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
