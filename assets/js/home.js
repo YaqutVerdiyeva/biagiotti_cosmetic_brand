@@ -154,13 +154,19 @@ function scrollFunction3() {
     }
   }, 25);
 }
+
+let scrolled = false;
+
 window.addEventListener("scroll", function () {
   if (
+    !scrolled &&
     document.documentElement.scrollTop > 2910 &&
     document.documentElement.scrollTop < 2915
   ) {
     scrollFunction1();
     scrollFunction2();
     scrollFunction3();
+
+    scrolled = true;
   }
 });
