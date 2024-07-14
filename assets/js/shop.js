@@ -64,8 +64,8 @@ allproducts.addEventListener("click", () => {
                   />
                   <div class="icons">
                     <div class="icon">
-                      <i class="fa-solid fa-plus"></i>
-                      <i class="fa-regular fa-heart"></i>
+                      <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                      <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
                     </div>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ allproducts.addEventListener("click", () => {
   });
 });
 
-cosmetic.addEventListener("click", () => {
+cosmetic.addEventListener("click", (e) => {
   productSection.innerHTML = "";
   const result = products.filter((elem) => {
     console.log(elem.type);
@@ -121,8 +121,8 @@ cosmetic.addEventListener("click", () => {
               />
               <div class="icons">
                 <div class="icon">
-                  <i class="fa-solid fa-plus"></i>
-                  <i class="fa-regular fa-heart"></i>
+                  <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                  <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
                 </div>
               </div>
             </div>
@@ -201,10 +201,10 @@ facemask.addEventListener("click", () => {
                     alt=""
                   />
                   <div class="icons">
-                    <div class="icon">
-                      <i class="fa-solid fa-plus"></i>
-                      <i class="fa-regular fa-heart"></i>
-                    </div>
+                  <div class="icon">
+                  <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                  <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                </div>
                   </div>
                 </div>
                 <div class="text">
@@ -282,10 +282,10 @@ foundation.addEventListener("click", () => {
                     alt=""
                   />
                   <div class="icons">
-                    <div class="icon">
-                      <i class="fa-solid fa-plus"></i>
-                      <i class="fa-regular fa-heart"></i>
-                    </div>
+                  <div class="icon">
+                  <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                  <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                </div>
                   </div>
                 </div>
                 <div class="text">
@@ -363,10 +363,10 @@ lipgloss.addEventListener("click", () => {
                       alt=""
                     />
                     <div class="icons">
-                      <div class="icon">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-heart"></i>
-                      </div>
+                    <div class="icon">
+                    <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                    <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                  </div>
                     </div>
                   </div>
                   <div class="text">
@@ -444,10 +444,10 @@ organic.addEventListener("click", () => {
                         alt=""
                       />
                       <div class="icons">
-                        <div class="icon">
-                          <i class="fa-solid fa-plus"></i>
-                          <i class="fa-regular fa-heart"></i>
-                        </div>
+                      <div class="icon">
+                      <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                      <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                    </div>
                       </div>
                     </div>
                     <div class="text">
@@ -525,10 +525,10 @@ perfumes.addEventListener("click", () => {
                           alt=""
                         />
                         <div class="icons">
-                          <div class="icon">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-regular fa-heart"></i>
-                          </div>
+                        <div class="icon">
+                        <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                        <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                      </div>
                         </div>
                       </div>
                       <div class="text">
@@ -610,10 +610,10 @@ select.addEventListener("change", function () {
                 alt=""
               />
               <div class="icons">
-                <div class="icon">
-                  <i class="fa-solid fa-plus"></i>
-                  <i class="fa-regular fa-heart"></i>
-                </div>
+              <div class="icon">
+              <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+              <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+            </div>
               </div>
             </div>
             <div class="text">
@@ -638,10 +638,10 @@ moneySelect.addEventListener("change", function () {
                     alt=""
                   />
                   <div class="icons">
-                    <div class="icon">
-                      <i class="fa-solid fa-plus"></i>
-                      <i class="fa-regular fa-heart"></i>
-                    </div>
+                  <div class="icon">
+                  <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                  <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                </div>
                   </div>
                 </div>
                 <div class="text">
@@ -662,10 +662,10 @@ moneySelect.addEventListener("change", function () {
                     alt=""
                   />
                   <div class="icons">
-                    <div class="icon">
-                      <i class="fa-solid fa-plus"></i>
-                      <i class="fa-regular fa-heart"></i>
-                    </div>
+                  <div class="icon">
+                  <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                  <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                </div>
                   </div>
                 </div>
                 <div class="text">
@@ -694,10 +694,10 @@ searchInput.addEventListener("input", function () {
                       alt=""
                     />
                     <div class="icons">
-                      <div class="icon">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-heart"></i>
-                      </div>
+                    <div class="icon">
+                    <i onclick="addBasket(${el.id})" class="fa-solid fa-plus"></i>
+                    <i onclick="addWishlist(${el.id})" class="fa-regular fa-heart"></i>
+                  </div>
                     </div>
                   </div>
                   <div class="text">
@@ -752,12 +752,34 @@ submitBtn.addEventListener("click", (e) => {
 async function addBasket(userId) {
   let res = await axios(`${BASE_URL}/products/${userId}`);
   let obj = await res.data;
-  console.log(obj);
-  axios.post(`${BASE_URL}/basket`, obj);
+  let response = await axios(`${BASE_URL}/basket/`);
+  let data = await response.data;
+  let selectedProduct = data.find((item) => item.id == userId);
+  console.log(obj.count);
+  if (!data.includes(selectedProduct)) {
+    axios.post(`${BASE_URL}/basket`, obj);
+  } else {
+    axios.patch(`${BASE_URL}/products/${userId}`, {
+      count: obj.count + 1,
+    });
+    axios.patch(`${BASE_URL}/basket/${userId}`, {
+      count: obj.count + 1,
+    });
+  }
 }
+
 async function addWishlist(userId) {
   let res = await axios(`${BASE_URL}/products/${userId}`);
   let obj = await res.data;
-  console.log(obj);
-  axios.post(`${BASE_URL}/wishlist`, obj);
+
+  let response = await axios(`${BASE_URL}/wishlist/`);
+  let data = await response.data;
+  let selectedProduct = data.find((item) => item.id == userId);
+  console.log(selectedProduct);
+
+  if (!data.includes(selectedProduct)) {
+    axios.post(`${BASE_URL}/wishlist`, obj);
+  } else {
+    alert("Already added!");
+  }
 }

@@ -266,12 +266,7 @@
                 cursor: pointer;
               }
             }
-            span {
-              font-family: "Lato", serif;
-              font-weight: 300;
-              color: #000;
-              font-size: 18px;
-            }
+            
             .stars {
               .fa-solid {
                 color: #c4c4c4;

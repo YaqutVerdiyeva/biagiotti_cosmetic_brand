@@ -36,8 +36,20 @@ getAllProducts();
 async function addBasket(userId) {
   let res = await axios(`${BASE_URL}/products/${userId}`);
   let obj = await res.data;
-  console.log(obj);
-  axios.post(`${BASE_URL}/basket`, obj);
+  let response = await axios(`${BASE_URL}/basket/`);
+  let data = await response.data;
+  let selectedProduct = data.find((item) => item.id == userId);
+  console.log(obj.count);
+  if (!data.includes(selectedProduct)) {
+    axios.post(`${BASE_URL}/basket`, obj);
+  } else {
+    axios.patch(`${BASE_URL}/products/${userId}`, {
+      count: obj.count + 1,
+    });
+    axios.patch(`${BASE_URL}/basket/${userId}`, {
+      count: obj.count + 1,
+    });
+  }
 }
 
 function removeBasket(id) {
