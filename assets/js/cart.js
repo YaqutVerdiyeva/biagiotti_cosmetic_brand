@@ -21,11 +21,11 @@ async function getAllProducts() {
     <td class="price"><div>$${el.price}.00</div></td>
     <td class="count">
       <div>
-        <button class="increase-btn" onClick="increaseBtn(${el.id}, ${
+        <button class="decrease-btn" onClick="decBtn(${el.id}, ${
       el.count
     })">-</button>
         <div class="item-counttt">${el.count}</div>
-        <button class="decrease-btn" onClick="decreaseBtn(${el.id}, ${
+        <button class="increase-btn" onClick="incBtn(${el.id}, ${
       el.count
     })">+</button>
       </div>
@@ -36,22 +36,31 @@ async function getAllProducts() {
 }
 getAllProducts();
 
-async function increaseBtn(id, count) {
+async function decBtn(id, count) {
   if (count > 1) {
     axios.patch(`${BASE_URL}/basket/${id}`, {
       count: count - 1,
     });
+    axios.patch(`${BASE_URL}/products/${id}`, {
+      count: count - 1,
+    });
   }
 }
-function decreaseBtn(id, count) {
+function incBtn(id, count) {
   console.log(count, id);
   axios.patch(`${BASE_URL}/basket/${id}`, {
+    count: count + 1,
+  });
+  axios.patch(`${BASE_URL}/products/${id}`, {
     count: count + 1,
   });
 }
 
 function deleteItem(id) {
   axios.delete(`${BASE_URL}/basket/${id}`);
+  axios.patch(`${BASE_URL}/products/${id}`, {
+    count: 1,
+  });
 }
 async function getAllProductsSum() {
   let res = await axios(`${BASE_URL}/basket`);

@@ -16,7 +16,7 @@
       "price": 52,
       "priceAzn": 88.4,
       "id": "3241",
-      "count": 4
+      "count": 1
     },
     {
       "image": "../assets/images/Shop-img-36-300x389.jpg",
@@ -34,7 +34,7 @@
       "price": 29,
       "priceAzn": 49.3,
       "id": "5621",
-      "count": 3
+      "count": 1
     },
     {
       "image": "../assets/images/Shop-img-6-600x803.jpg",
@@ -52,7 +52,7 @@
       "priceAzn": 76.5,
       "price": 45,
       "id": "524852",
-      "count": 3
+      "count": 1
     },
     {
       "image": "../assets/images/Shop-img-44-300x389.jpg",
@@ -70,7 +70,7 @@
       "price": 45,
       "priceAzn": 76.5,
       "id": "5485",
-      "count": 1
+      "count": 2
     },
     {
       "image": "../assets/images/Shop-img-4-600x803.jpg",
@@ -97,7 +97,7 @@
       "price": 64,
       "priceAzn": 108.8,
       "id": "38545",
-      "count": 2
+      "count": 1
     },
     {
       "image": "../assets/images/Shop-img-7-600x803.jpg",
@@ -153,36 +153,30 @@
   ],
   "wishlist": [
     {
-      "id": "4766",
-      "image": "../assets/images/Shop-img-1-5-600x803.jpg",
-      "name": "PINK LIPSTICK",
-      "type": "Lip Gloss",
-      "price": 49,
-      "priceAzn": 83.3
-    },
-    {
-      "id": "524852",
-      "image": "../assets/images/Shop-img-3-600x803.jpg",
-      "name": "BEAUTY TONER",
+      "id": "959",
+      "image": "../assets/images/Shop-img-36-300x389.jpg",
+      "name": "CHARCOAL MASK",
       "type": "Face Masks",
-      "priceAzn": 76.5,
-      "price": 45
+      "price": 83,
+      "priceAzn": 141.1,
+      "count": 1
     },
     {
-      "id": "5621",
-      "image": "../assets/images/Shop-img-6-600x803.jpg",
-      "name": "COCONUT HAND CREME",
-      "type": "Cosmetic",
-      "price": 29,
-      "priceAzn": 49.3
-    },
-    {
-      "id": "52452",
-      "image": "../assets/images/Shop-img-45-300x389.jpg",
-      "name": "POSH SAFARI",
+      "id": "5247",
+      "image": "../assets/images/Shop-img-44-300x389.jpg",
+      "name": "PANORAMIC WHEEL",
       "type": "Perfumes",
-      "priceAzn": 76.5,
-      "price": 45,
+      "price": 66,
+      "priceAzn": 112.2,
+      "count": 1
+    },
+    {
+      "id": "6986",
+      "image": "../assets/images/Shop-img-64-300x389.jpg",
+      "name": "LIP MASK",
+      "type": "Face Masks",
+      "price": 35,
+      "priceAzn": 59.5,
       "count": 1
     }
   ],
@@ -194,43 +188,16 @@
       "type": "Lip Gloss",
       "price": 49,
       "priceAzn": 83.3,
-      "count": 1
-    },
-    {
-      "id": "5621",
-      "image": "../assets/images/Shop-img-6-600x803.jpg",
-      "name": "COCONUT HAND CREME",
-      "type": "Cosmetic",
-      "price": 29,
-      "priceAzn": 49.3,
-      "count": 1
-    },
-    {
-      "id": "38545",
-      "image": "../assets/images/Shop-img-36-300x389.jpg",
-      "name": "INSTANT DETOX",
-      "type": "Cosmetic",
-      "price": 64,
-      "priceAzn": 108.8,
-      "count": 1
-    },
-    {
-      "id": "45225",
-      "image": "../assets/images/Shop-img-4-600x803.jpg",
-      "name": "EYE DROPS",
-      "type": "Face Masks",
-      "price": 18,
-      "priceAzn": 30.6,
       "count": 3
     },
     {
-      "id": "52452",
-      "image": "../assets/images/Shop-img-45-300x389.jpg",
-      "name": "POSH SAFARI",
-      "type": "Perfumes",
-      "priceAzn": 76.5,
+      "id": "5485",
+      "image": "../assets/images/Shop-img-3-600x803.jpg",
+      "name": "CREME",
+      "type": "Organic",
       "price": 45,
-      "count": 1
+      "priceAzn": 76.5,
+      "count": 2
     }
   ],
   "portfolio": [
