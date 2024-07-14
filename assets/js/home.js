@@ -132,7 +132,7 @@ function scrollFunction1() {
     if (sum == 115) {
       clearInterval(interval);
     }
-  }, 25);
+  }, 15);
 }
 function scrollFunction2() {
   let sum2 = 0;
@@ -142,7 +142,7 @@ function scrollFunction2() {
     if (sum2 == 106) {
       clearInterval(interval);
     }
-  }, 25);
+  }, 15);
 }
 function scrollFunction3() {
   let sum3 = 0;
@@ -152,7 +152,7 @@ function scrollFunction3() {
     if (sum3 == 122) {
       clearInterval(interval);
     }
-  }, 25);
+  }, 15);
 }
 
 let scrolled = false;
