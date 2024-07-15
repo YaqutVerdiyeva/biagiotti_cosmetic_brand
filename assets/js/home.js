@@ -13,7 +13,18 @@ let tintModal = document.querySelector(".about-tint");
 let openVideo = document.querySelector(".open-video-btn");
 let closeVideo = document.querySelector(".close-video");
 let videoModal = document.querySelector(".video");
-let video = document.querySelector(".my-video");
+let star1 = document.querySelectorAll(".star1");
+let star2 = document.querySelectorAll(".star2");
+let star3 = document.querySelectorAll(".star3");
+let star4 = document.querySelectorAll(".star4");
+let arr1 = [];
+let arr2 = [];
+let arr3 = [];
+let arr4 = [];
+let scrolled = false;
+let counter1 = document.querySelector(".count-1");
+let counter2 = document.querySelector(".count-2");
+let counter3 = document.querySelector(".count-3");
 
 openCreme.addEventListener("click", () => {
   cremeModal.style.height = "100vh";
@@ -45,17 +56,9 @@ openVideo.addEventListener("click", () => {
 closeVideo.addEventListener("click", () => {
   videoModal.style.width = "0";
 });
-
-let star1 = document.querySelectorAll(".star1");
-let star2 = document.querySelectorAll(".star2");
-let star3 = document.querySelectorAll(".star3");
-let star4 = document.querySelectorAll(".star4");
-
-let arr1 = [];
 star1.forEach((el, index) => {
   el.addEventListener("click", () => {
     arr1.push(index + 1);
-    console.log(arr1);
     let sum = arr1.reduce((curr, a) => curr + a, 0);
     let middleSum = Math.ceil(sum / arr1.length);
     document.querySelector(".result1").innerHTML = `${middleSum}/5`;
@@ -68,11 +71,9 @@ star1.forEach((el, index) => {
     });
   });
 });
-let arr2 = [];
 star2.forEach((el, index) => {
   el.addEventListener("click", () => {
     arr2.push(index + 1);
-    console.log(arr2);
     let sum = arr2.reduce((curr, a) => curr + a, 0);
     let middleSum = Math.ceil(sum / arr2.length);
     document.querySelector(".result2").innerHTML = `${middleSum}/5`;
@@ -85,11 +86,9 @@ star2.forEach((el, index) => {
     });
   });
 });
-let arr3 = [];
 star3.forEach((el, index) => {
   el.addEventListener("click", () => {
     arr3.push(index + 1);
-    console.log(arr3);
     let sum = arr3.reduce((curr, a) => curr + a, 0);
     let middleSum = Math.ceil(sum / arr3.length);
     document.querySelector(".result3").innerHTML = `${middleSum}/5`;
@@ -102,11 +101,9 @@ star3.forEach((el, index) => {
     });
   });
 });
-let arr4 = [];
 star4.forEach((el, index) => {
   el.addEventListener("click", () => {
     arr4.push(index + 1);
-    console.log(arr4);
     let sum = arr4.reduce((curr, a) => curr + a, 0);
     let middleSum = Math.ceil(sum / arr4.length);
     document.querySelector(".result4").innerHTML = `${middleSum}/5`;
@@ -119,11 +116,6 @@ star4.forEach((el, index) => {
     });
   });
 });
-
-let counter1 = document.querySelector(".count-1");
-let counter2 = document.querySelector(".count-2");
-let counter3 = document.querySelector(".count-3");
-
 function scrollFunction1() {
   let sum = 0;
   let interval = setInterval(function () {
@@ -154,9 +146,6 @@ function scrollFunction3() {
     }
   }, 15);
 }
-
-let scrolled = false;
-
 window.addEventListener("scroll", function () {
   if (
     !scrolled &&

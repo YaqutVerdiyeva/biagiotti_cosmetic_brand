@@ -1,6 +1,7 @@
 let BASE_URL = `http://localhost:3000`;
 let cartProducts = document.querySelector(".cart-products");
 let total = document.querySelector(".cart-total");
+
 async function getAllProducts() {
   let res = await axios(`${BASE_URL}/basket`);
   let data = res.data;
@@ -35,7 +36,6 @@ async function getAllProducts() {
   });
 }
 getAllProducts();
-
 async function decBtn(id, count) {
   if (count > 1) {
     axios.patch(`${BASE_URL}/basket/${id}`, {
@@ -47,7 +47,6 @@ async function decBtn(id, count) {
   }
 }
 function incBtn(id, count) {
-  console.log(count, id);
   axios.patch(`${BASE_URL}/basket/${id}`, {
     count: count + 1,
   });
@@ -55,7 +54,6 @@ function incBtn(id, count) {
     count: count + 1,
   });
 }
-
 function deleteItem(id) {
   axios.delete(`${BASE_URL}/basket/${id}`);
   axios.patch(`${BASE_URL}/products/${id}`, {

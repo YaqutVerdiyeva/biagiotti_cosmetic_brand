@@ -2,8 +2,8 @@ let BASE_URL = `http://localhost:3000`;
 
 let wishlistProducts = document.querySelector(".wishlist-products");
 let countProducts = document.querySelector(".count-product");
-
 let products = [];
+
 async function getAllProducts() {
   let res = await axios(`${BASE_URL}/wishlist`);
   let data = res.data;
@@ -39,7 +39,6 @@ async function addBasket(userId) {
   let response = await axios(`${BASE_URL}/basket/`);
   let data = await response.data;
   let selectedProduct = data.find((item) => item.id == userId);
-  console.log(obj.count);
   if (!data.includes(selectedProduct)) {
     axios.post(`${BASE_URL}/basket`, obj);
   } else {
@@ -51,7 +50,6 @@ async function addBasket(userId) {
     });
   }
 }
-
 function removeBasket(id) {
   axios.delete(`${BASE_URL}/wishlist/${id}`);
 }

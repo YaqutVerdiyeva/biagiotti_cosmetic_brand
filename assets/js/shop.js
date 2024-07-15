@@ -16,8 +16,8 @@ let userName = document.querySelector(".user-name");
 let userPhoto = document.querySelector(".user-photo");
 let allComments = document.querySelector(".comments");
 let submitBtn = document.querySelector(".submit-btn");
-
 let products = [];
+
 async function getAllProducts() {
   let res = await axios(`${BASE_URL}/products`);
   let data = res.data;
@@ -46,12 +46,10 @@ async function getAllProducts() {
   });
 }
 getAllProducts();
-
 allproducts.addEventListener("click", () => {
   productSection.innerHTML = "";
   getAllProducts();
   moneySelect.addEventListener("change", function (e) {
-    console.log(select.value);
     if (moneySelect.value == "azn") {
       productSection.innerHTML = "";
       products.forEach((el, i) => {
@@ -103,11 +101,9 @@ allproducts.addEventListener("click", () => {
     }
   });
 });
-
 cosmetic.addEventListener("click", (e) => {
   productSection.innerHTML = "";
   const result = products.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Cosmetic";
   });
   productSection.innerHTML = "";
@@ -189,7 +185,6 @@ cosmetic.addEventListener("click", (e) => {
 facemask.addEventListener("click", () => {
   productSection.innerHTML = "";
   const result = products.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Face Masks";
   });
   result.forEach((el, i) => {
@@ -270,7 +265,6 @@ facemask.addEventListener("click", () => {
 foundation.addEventListener("click", () => {
   productSection.innerHTML = "";
   const result = products.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Foundation";
   });
   result.forEach((el, i) => {
@@ -351,7 +345,6 @@ foundation.addEventListener("click", () => {
 lipgloss.addEventListener("click", () => {
   productSection.innerHTML = "";
   const result = products.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Lip Gloss";
   });
   result.forEach((el, i) => {
@@ -432,7 +425,6 @@ lipgloss.addEventListener("click", () => {
 organic.addEventListener("click", () => {
   productSection.innerHTML = "";
   const result = products.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Organic";
   });
   result.forEach((el, i) => {
@@ -513,7 +505,6 @@ organic.addEventListener("click", () => {
 perfumes.addEventListener("click", () => {
   productSection.innerHTML = "";
   const result = products.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Perfumes";
   });
   result.forEach((el, i) => {
@@ -592,9 +583,7 @@ perfumes.addEventListener("click", () => {
     }
   });
 });
-
 select.addEventListener("change", function () {
-  console.log(select.value);
   if (select.value == "lowtohigh") {
     products.sort((a, b) => a.price - b.price);
   } else if (select.value == "hightolow") {
@@ -624,7 +613,6 @@ select.addEventListener("change", function () {
           </div>`);
   });
 });
-
 moneySelect.addEventListener("change", function () {
   console.log(select.value);
   if (moneySelect.value == "azn") {
@@ -677,7 +665,6 @@ moneySelect.addEventListener("change", function () {
     });
   }
 });
-
 searchInput.addEventListener("input", function () {
   let newProducts = products.filter((el) => {
     return el.name
@@ -708,7 +695,6 @@ searchInput.addEventListener("input", function () {
                 </div>`);
   });
 });
-
 async function getAllComments() {
   let res = await axios(`${BASE_URL}/comments`);
   let data = res.data;
@@ -748,14 +734,12 @@ submitBtn.addEventListener("click", (e) => {
     alert("Please enter your comment!");
   }
 });
-
 async function addBasket(userId) {
   let res = await axios(`${BASE_URL}/products/${userId}`);
   let obj = await res.data;
   let response = await axios(`${BASE_URL}/basket/`);
   let data = await response.data;
   let selectedProduct = data.find((item) => item.id == userId);
-  console.log(obj.count);
   if (!data.includes(selectedProduct)) {
     axios.post(`${BASE_URL}/basket`, obj);
   } else {
@@ -767,16 +751,12 @@ async function addBasket(userId) {
     });
   }
 }
-
 async function addWishlist(userId) {
   let res = await axios(`${BASE_URL}/products/${userId}`);
   let obj = await res.data;
-
   let response = await axios(`${BASE_URL}/wishlist/`);
   let data = await response.data;
   let selectedProduct = data.find((item) => item.id == userId);
-  console.log(selectedProduct);
-
   if (!data.includes(selectedProduct)) {
     axios.post(`${BASE_URL}/wishlist`, obj);
   } else {

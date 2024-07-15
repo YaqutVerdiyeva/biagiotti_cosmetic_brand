@@ -5,7 +5,6 @@ let bodycare = document.querySelector(".bodycare");
 let cosmetics = document.querySelector(".cosmetics");
 let makeup = document.querySelector(".makeup");
 let photos = document.querySelector(".photos");
-
 let images = [];
 
 async function getAllPortfolioImages() {
@@ -26,7 +25,6 @@ async function getAllPortfolioImages() {
   });
 }
 getAllPortfolioImages();
-
 showall.addEventListener("click", () => {
   photos.innerHTML = "";
   images.forEach((el, i) => {
@@ -45,7 +43,6 @@ showall.addEventListener("click", () => {
 bodycare.addEventListener("click", () => {
   photos.innerHTML = "";
   const bodyResult = images.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Bodycare";
   });
   bodyResult.forEach((el, i) => {
@@ -64,7 +61,6 @@ bodycare.addEventListener("click", () => {
 cosmetics.addEventListener("click", () => {
   photos.innerHTML = "";
   const bodyResult = images.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Cosmetics";
   });
   bodyResult.forEach((el, i) => {
@@ -83,7 +79,6 @@ cosmetics.addEventListener("click", () => {
 makeup.addEventListener("click", () => {
   photos.innerHTML = "";
   const bodyResult = images.filter((elem) => {
-    console.log(elem.type);
     return elem.type === "Make Up";
   });
   bodyResult.forEach((el, i) => {
