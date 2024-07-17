@@ -723,7 +723,7 @@ submitBtn.addEventListener("click", (e) => {
   let year = new Date().getFullYear();
   let day = new Date().getDate();
   e.preventDefault();
-  if (commentText) {
+  if (commentText.value) {
     axios.post(`${BASE_URL}/comments`, {
       name: userName.value,
       photo: userPhoto.value,
@@ -731,7 +731,7 @@ submitBtn.addEventListener("click", (e) => {
       time: `${day}/${month}/${year}`,
     });
   } else {
-    alert("Please enter your comment!");
+    alertFunc("Please enter your comment!");
   }
 });
 async function addBasket(userId) {
@@ -760,6 +760,19 @@ async function addWishlist(userId) {
   if (!data.includes(selectedProduct)) {
     axios.post(`${BASE_URL}/wishlist`, obj);
   } else {
-    alert("Already added!");
+    alertFunc("Already added!");
   }
+}
+function alertFunc(text) {
+  body = document.body;
+  let alertSectionMain = document.createElement("div");
+  let alertSection = document.createElement("div");
+  body.append(alertSectionMain);
+  alertSectionMain.append(alertSection);
+  alertSection.innerHTML = text;
+  alertSection.classList.add("alert");
+  alertSectionMain.classList.add("alert-main");
+  alertSectionMain.addEventListener("click", () => {
+    alertSectionMain.style.display = "none";
+  });
 }

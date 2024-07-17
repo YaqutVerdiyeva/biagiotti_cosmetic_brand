@@ -1,6 +1,8 @@
 let BASE_URL = `http://localhost:3000`;
 let cartProducts = document.querySelector(".cart-products");
 let total = document.querySelector(".cart-total");
+let sellInput = document.querySelector(".sell-input");
+let sellBtn = document.querySelector(".sell-btn");
 
 async function getAllProducts() {
   let res = await axios(`${BASE_URL}/basket`);
@@ -70,5 +72,13 @@ async function getAllProductsSum() {
     sum = sum + sumProduct;
   }
   total.innerHTML = `TOTAL:  $${sum}`;
+  sellBtn.addEventListener("click", () => {
+    if (sellInput.value == "sell30") {
+      total.innerHTML = `TOTAL: <s style="margin-right:15px">$${sum}</s>  $${
+        (sum * 70) / 100
+      }`;
+    }
+    sellInput.value = "";
+  });
 }
 getAllProductsSum();
