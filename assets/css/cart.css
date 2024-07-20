@@ -91,7 +91,7 @@
       font-weight: 500;
       padding-bottom: 50px;
     }
-    .cart-subtotal,
+
     .cart-total {
       height: 50px;
       border-bottom: 1px solid #cbcbcb;
@@ -99,6 +99,15 @@
       font-weight: 500;
       font-size: 22px;
       padding: 10px 0;
+      display: flex;
+      position: relative;
+      p {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        margin-left: 20px;
+        color: red;
+      }
     }
   }
 }

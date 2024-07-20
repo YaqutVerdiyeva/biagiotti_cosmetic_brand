@@ -33,7 +33,7 @@ async function getAllProducts() {
     })">+</button>
       </div>
     </td>
-    <td class="subtotal"><div>$${el.price * el.count}.00</div></td>
+    <td class="subtotal"><div>$${el.price * el.count}.00 </div></td>
   </tr>`);
   });
 }
@@ -71,14 +71,30 @@ async function getAllProductsSum() {
     let sumProduct = i.price * i.count;
     sum = sum + sumProduct;
   }
+  
   total.innerHTML = `TOTAL:  $${sum}`;
   sellBtn.addEventListener("click", () => {
     if (sellInput.value == "sell30") {
       total.innerHTML = `TOTAL: <s style="margin-right:15px">$${sum}</s>  $${
         (sum * 70) / 100
-      }`;
+      }<p onClick="deleteCoupon()">Delete coupon</p>`;
     }
+    
     sellInput.value = "";
   });
+  
 }
 getAllProductsSum();
+
+async function deleteCoupon() {
+  let res = await axios(`${BASE_URL}/basket`);
+  let data = res.data;
+  products = data;
+  let sum = 0;
+  for (let i of products) {
+    let sumProduct = i.price * i.count;
+    sum = sum + sumProduct;
+  }
+  
+  total.innerHTML = `TOTAL:  $${sum}`;
+}
